@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #FAF9FC;
+  overflow-x: hidden;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .alert {
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  left: 50%;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 80%;
+  -webkit-transition: .4s;
+  transition: .4s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.container .alert.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.container .alert .close {
+  outline: none;
+}
+
+.container .authorization_register {
+  position: relative;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #F0F0F0;
+  width: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 2em;
+}
+
+.container .authorization_register .header {
+  width: 100%;
+  border-bottom: 1px solid #F0F0F0;
+  text-align: center;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  padding: 1em;
+}
+
+.container .authorization_register .header h2 {
+  font-weight: normal;
+  color: #8993FD;
+  font-size: 1.4em;
+  margin: 0;
+}
+
+.container .authorization_register .body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  padding: 2em;
+}
+
+.container .authorization_register .body .control {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-right: 2em;
+}
+
+.container .authorization_register .body .control .input-group {
+  margin-bottom: 1em;
+}
+
+.container .authorization_register .body .control .input-group input:focus {
+  border-color: #707cfd;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(137, 147, 253, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(137, 147, 253, 0.5) !important;
+}
+
+.container .authorization_register .body .control.register input:valid:not(:placeholder-shown) {
+  border-color: var(--success);
+}
+
+.container .authorization_register .body .control.register input:invalid:not(:placeholder-shown) {
+  border-color: var(--danger);
+}
+
+.container .authorization_register .body .control.register input.error {
+  border-color: var(--danger);
+}
+
+.container .authorization_register .body .control button {
+  width: 100%;
+  margin-top: 1em;
+  padding: .7em;
+  background: #8993fd;
+  border-color: #707cfd;
+}
+
+.container .authorization_register .body .control button:focus {
+  background: #7a85fd;
+  border-color: #707cfd;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(137, 147, 253, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(137, 147, 253, 0.5) !important;
+}
+
+.container .authorization_register .body .img {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.container .authorization_register .body .img img {
+  width: 230px;
+}
+
+.container .authorization_register .footer {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  border-top: 1px solid #F0F0F0;
+  padding: 0.5em;
+}
+
+.container .authorization_register .footer a {
+  color: #8993FD;
+  margin-left: 0.3em;
+}
+
+@media (max-width: 600px) {
+  .authorization_register .body {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .authorization_register .body .control {
+    margin-right: 0 !important;
+  }
+  .authorization_register .body .img {
+    width: 100%;
+    margin-top: 2em;
+  }
+  .authorization_register .body .img img {
+    width: 100% !important;
+  }
+}
+/*# sourceMappingURL=stylePanel.css.map */
